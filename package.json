@@ -1,0 +1,32 @@
+{
+  "name": "my-online-blog-tech-it-out-ohya",
+  "version": "1.0.0",
+  "description": "my-online-blog-tech-it-out-ohya",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabrtraveler/my-online-blog-tech-it-out-ohya.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabrtraveler/my-online-blog-tech-it-out-ohya/issues"
+  },
+  "homepage": "https://github.com/sabrtraveler/my-online-blog-tech-it-out-ohya#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bulma": "^0.9.3",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.17.0"
+  }
+}
