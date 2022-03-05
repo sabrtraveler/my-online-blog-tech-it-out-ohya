@@ -6,7 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
       where: {
-        // use the ID from the session
+        // use the session id
         user_id: req.session.user_id
       },
       attributes: [
@@ -31,7 +31,7 @@ router.get('/', withAuth, (req, res) => {
       ]
     })
       .then(dbPostData => {
-        // serialize data before passing to template
+        // before passing to template the the data needs to be serialized 
         const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('dashboard', { posts, loggedIn: true });
       })
@@ -90,7 +90,7 @@ router.get('/', withAuth, (req, res) => {
 router.get('/create/', withAuth, (req, res) => {
     Post.findAll({
       where: {
-        // use the ID from the session
+        // use the session id
         user_id: req.session.user_id
       },
       attributes: [
@@ -115,7 +115,7 @@ router.get('/create/', withAuth, (req, res) => {
       ]
     })
       .then(dbPostData => {
-        // serialize data before passing to template
+        // before passing to template the the data needs to be serialized 
         const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('create-post', { posts, loggedIn: true });
       })
